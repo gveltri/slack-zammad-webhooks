@@ -1,0 +1,16 @@
+version: '2'
+services:
+  web:
+    image: {{ IMAGE }}
+    ports:
+    - 8080:80
+    environment:
+      ZAMMAD_TOKEN: {{ ZAMMAD_TOKEN }}
+      MATTERMOST_TOKENS: {{ MATTERMOST_TOKENS }}
+      COMPANY_DOMAIN: {{ COMPANY_DOMAIN }}
+      ZAMMAD_DOMAIN: {{ ZAMMAD_DOMAIN }}
+      ZAMMAD_DEFAULT_GROUP: {{ ZAMMAD_DEFAULT_GROUP }}
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always

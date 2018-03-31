@@ -1,0 +1,13 @@
+---
+
+- name: create docker compose file
+  hosts: localhost
+  vars_files:
+    - main.yml
+  tasks:
+    - name: template docker-compose 
+      template: src=docker-compose.yml.j2
+                dest=./docker-compose.yml
+                mode=0755
+
+  
