@@ -3,7 +3,7 @@ services:
   web:
     image: {{ IMAGE }}
     ports:
-    - 8080:80
+    - 80:80
     environment:
       ZAMMAD_TOKEN: {{ ZAMMAD_TOKEN }}
       MATTERMOST_TOKENS: {{ MATTERMOST_TOKENS }}
