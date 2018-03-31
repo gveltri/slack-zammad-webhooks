@@ -1,4 +1,5 @@
 # variables templated into docker-compose.yml.j2 from playbook build-compose.yml
+IMAGE: 
 ZAMMAD_TOKEN: 
 MATTERMOST_TOKENS: 
 COMPANY_DOMAIN: 
