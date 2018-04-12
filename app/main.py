@@ -119,7 +119,7 @@ def mm_zammad_create_ticket():
                 "attachments":[response]
             }), 200
         else:
-            data = response.json()
+            data = r.json()
             ticket_number = data.get('id','0')
             ticket_url = '{}/#tickets/zoom/{}'.format(ZAMMAD_DOMAIN,str(ticket_number))
 
